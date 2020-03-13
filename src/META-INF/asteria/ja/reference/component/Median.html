@@ -1,0 +1,102 @@
+<html xmlns:h="http://www.infoteria.com/asteria/flowengine/help">
+	<head>
+		<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>中央値</title>
+		<link href="../../css/steady_guide.css" rel="stylesheet" type="text/css" media="all">
+		<style type="text/css">
+		<!--
+			th{
+				background-color: #DEDEDE;
+				color: #000022;
+			}
+			.blueFont{
+				color: #008ED3;
+			}
+			.titleLine{
+				background-color: #008ED3;
+				color: white;
+				padding: 4px 0 4px 8px;
+			}
+		-->
+		</style>
+	</head>
+	<body>
+		<div id="contents">
+			<h2 class="titleLine"><img src="../icons/Median.png" style="vertical-align:middle">中央値</h2>
+			<p>レコードの１つのフィールドの中央値をプロパティへ出力します　</p>
+			<h2 class="blueFont">■ストリーム情報</h2>
+			<table width="730" cellpadding="2" cellspacing="0" border="1">
+				<tr>
+					<th width="10%" rowspan="2" nowrap="true">入力</th>
+					<th width="20%">フォーマット</th>
+					<td width="70%">Record;CSV</td>
+				</tr>
+				<tr>
+					<th>接続数</th>
+					<td>1</td>
+				</tr>
+				<tr>
+					<th rowspan="2" nowrap="true">出力</th>
+					<th>フォーマット</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th>説明</th>
+					<td>入力ストリームをそのまま出力します。</td>
+				</tr>
+			</table>
+			<h2 class="blueFont">■コンポーネントプロパティ</h2>
+			<table width="730" border="1" cellspacing="0" cellpadding="2">
+				<tr>
+					<th width="25%">名前</th>
+					<th width="12%">プロパティ型</th>
+					<th width="11%">マッピング</th>
+					<th width="52%">説明</th>
+				</tr>
+				<tr>
+					<td><b>フィールド名</b></td>
+					<td>string</td>
+					<td align="center">入力＆出力</td>
+					<td>入力ストリームのフィールドで中央値を計算したいフィールド名を指定します。</td>
+				</tr>
+				<tr>
+					<td><b>中央値</b>
+					</td><td>double</td>
+					<td align="center">出力</td>
+					<td>計算した中央値が入ります。</td>
+				</tr>
+				<tr>
+					<td><b>レコード数</b></td>
+					<td>int</td>
+					<td align="center">出力</td>
+					<td>計算に使用したレコード数が入ります。</td>
+				</tr>
+			</table>
+			<h2 class="blueFont">■エラー処理</h2>
+			<table width="730" border="1" cellspacing="0" cellpadding="2">
+				<tr>
+					<th nowrap="nowrap">タイプ</th>
+					<th nowrap="nowrap">パラメーター</th>
+					<th nowrap="nowrap">エラー処理フロー<br>へのストリーム</th>
+					<th nowrap="nowrap">エラー<br>コード</th>
+					<th nowrap="nowrap">説明</th>
+				</tr>
+				<tr>
+					<td rowspan="3">汎用</td>
+					<td rowspan="3" align="center">なし</td>
+					<td rowspan="3">コンポーネントの入力ストリーム</td>
+					<td align="center">なし</td>
+					<td>その他のエラー</td>
+				</tr>
+				<tr>
+					<td align="center">1</td>
+					<td>フィールド名が指定されなかった場合</td>
+				</tr>
+				<tr>
+					<td align="center">2</td>
+					<td>レコードが空の場合</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
