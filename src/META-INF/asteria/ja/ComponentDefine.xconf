@@ -11,4 +11,16 @@
 		<Input accept="Record;CSV" default="Record"/>
 		<Output streamPassThrough="true"/>
 	</Component>
+	<Component category="ツール" displayName="Median2" icon="Median2.png" name="Median2" toolTip="度数分布から中央値を出力します">
+		<Class>com.asteria.sample.kotlin.component.MedianComponent2</Class>
+		<Message key="1">フィールド名が指定されていません</Message>
+		<Message key="2">入力ストリームが空です</Message>
+		<Property mapping="false" name="Exception" type="exception"/>
+		<Property displayName="名前フィールド" name="NameField" required="true" tooltip="" type="string"/>
+		<Property displayName="値フィールド" name="ValueField" required="true" tooltip="" type="string"/>
+		<Property displayName="名前" name="MedianName" tooltip="中央値の名前を返します" type="string" mapping="readonly"/>
+		<Property displayName="中央値" name="Median" tooltip="中央値を返します" type="double" mapping="readonly"/>
+		<Input accept="Record;CSV" default="Record"/>
+		<Output streamPassThrough="true"/>
+	</Component>
 </ComponentDefine>
